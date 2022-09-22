@@ -29,6 +29,11 @@ e acompanhe em tempo real o valor total de sua compra. Para acessar o app [cliqu
 <p>- Veja a lista com todos os produtos adicionados até o momento;</p>
 <p>- Remova um produto da lista(ao remover do carrinho);</p>
 <p>- Remova todos os produtos de uma só vez;</p>
+<p>
+- Utilização de memória persistente (localStorage), devido a isso
+você poderá fechar o navegador ou reiniciar seu aparelho que os
+dados vão continuar salvos.
+</p>
 <div align="center">
 
 https://user-images.githubusercontent.com/58310961/191827537-50f19e69-12e6-4421-8ee7-9f3a3d2d1932.mp4
