@@ -54,3 +54,7 @@ para rodar em modo desenvolvimento, utilize:
 - ``Vite``
 - ``ReactJS``
 - ``Typescript``
+
+# 📄 Licença
+
+Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](./license) para mais detalhes.
