@@ -139,7 +139,6 @@ input {
   width: 29%;
   height: 2rem;
   border-radius: 0.625rem;
-  cursor: pointer;
 }
 
 #clear {
@@ -260,6 +259,10 @@ footer a {
   text-decoration: none;
   color: #FFFFFF;
   width: 100%;
+}
+
+button {
+  cursor: pointer;
 }
 
 @media only screen and (max-width: 356px) {
