@@ -16,12 +16,12 @@
 </p>
 
 
-# Introdução
+## 💻 Introdução
 
 Mercado simples é uma aplicação para te auxiliar na hora de fazer as compas, cadastre os produtos adicionados ao carrinho
 e acompanhe em tempo real o valor total de sua compra.
 
-# 🔨 Funcionamento
+## 🔨 Funcionamento
 
 <p>- Cadastre os produtos adicionados ao carrinho;</p>
 <p>- Veja a lista com todos os produtos adicionados até o momento;</p>
@@ -33,7 +33,7 @@ https://user-images.githubusercontent.com/58310961/191799241-757ab9d5-e996-4591-
 
 </div>
 
-# Instalação
+## 💿 Instalação
 
 <p>Após baixar o projeto, utilize o comando:</p>
 
@@ -50,11 +50,11 @@ para rodar em modo desenvolvimento, utilize:
   npm run dev
 </code>
 
-# ✔️ Tecnologias utilizada
+## ✔️ Tecnologias utilizada
 - ``Vite``
 - ``ReactJS``
 - ``Typescript``
 
-# 📄 Licença
+## 📄 Licença
 
 Esse projeto está sob a licença MIT. Veja o arquivo [LICENSE](./license) para mais detalhes.
