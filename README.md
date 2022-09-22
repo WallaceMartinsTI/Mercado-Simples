@@ -19,7 +19,7 @@
 ## 💻 Introdução
 
 Mercado simples é uma aplicação para te auxiliar na hora de fazer as compas, cadastre os produtos adicionados ao carrinho
-e acompanhe em tempo real o valor total de sua compra. Para acessar o app [clique aqui](https://mercadosimples.ga/)
+e acompanhe em tempo real o valor total de sua compra. Para acessar o app [clique aqui](https://mercadosimples.ga/).
 
 ## 🔨 Funcionamento
 
