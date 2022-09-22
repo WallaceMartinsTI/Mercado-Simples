@@ -17,7 +17,7 @@ function App() {
   const [price, setPrice] = useState("")
   const [quantity, setQuantity] = useState("")
   const [products, setProducts] = useState((initialProduct === null ? [{ id: "0", name, price, quantity, total: (Number(quantity) * Number(price)) }] : JSON.parse(initialProduct)))
-  
+
   const totalCost = products.reduce((total: number, product: ProductProps) => {
     return total + product.total
   }, 0)
@@ -85,7 +85,7 @@ function App() {
           <p>O valor de sua compra em tempo real</p>
         </header>
 
-        <div className="display">
+        <div id="display" className="display">
           <div>Total</div>
           <div>{(totalCost).toLocaleString('pt-br', { style: 'currency', currency: 'BRL' })}</div>
         </div>
@@ -188,13 +188,13 @@ function App() {
             Limpar todos os produtos
           </button>
         </div>
-
-        <footer>
-          <a href="https://www.linkedin.com/in/wallace-martins-ti/" target="_blank">
-            <p>WCSM &copy; 2022</p>
-          </a>
-        </footer>
       </div>
+
+      <footer>
+        <a href="https://www.linkedin.com/in/wallace-martins-ti/" target="_blank">
+          <p>WCSM &copy; 2022</p>
+        </a>
+      </footer>
     </div>
   )
 }
