@@ -30,9 +30,9 @@ e acompanhe em tempo real o valor total de sua compra. Para acessar o app [cliqu
 <p>- Remova um produto da lista(ao remover do carrinho);</p>
 <p>- Remova todos os produtos de uma só vez;</p>
 <p>
-- Utilização de memória persistente (localStorage), devido a isso
+- Utilização de memória persistente (Cookies), devido a isso
 você poderá fechar o navegador ou reiniciar seu aparelho que os
-dados vão continuar salvos.
+dados vão continuar salvos (por 28 dias).
 </p>
 <div align="center">
 
@@ -58,9 +58,12 @@ para rodar em modo desenvolvimento, utilize:
 </code>
 
 ## ✔️ Tecnologias utilizada
-- ``Vite``
+- ``NextJS``
 - ``ReactJS``
+- ``Nookies``
 - ``Typescript``
+- ``Sass``
+- ``Uuid``
 
 ## 📄 Licença
 

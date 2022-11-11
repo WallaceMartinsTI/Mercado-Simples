@@ -1,0 +1,276 @@
+.App {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  background-color: #6495ed;
+  padding: 1.12rem;
+  width: 100%;
+  height: 100%;
+  min-width: 24.5rem;
+  min-height: 53.12rem;
+
+  .main_content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h1 {
+        color: #ffffff;
+      }
+
+      p {
+        margin-top: 0.625rem;
+        color: #e6e6fa;
+        font-size: 0.875rem;
+      }
+    }
+
+    .display {
+      position: sticky;
+      top: 0;
+      margin-top: 1.18rem;
+      background-color: rgba(198, 239, 206, 78%);
+
+      display: flex;
+      width: 22.31rem;
+      height: 2.81rem;
+      border-radius: 0.625rem;
+
+      align-items: center;
+      justify-content: space-between;
+      padding-left: 1.25rem;
+      padding-right: 1.25rem;
+
+      color: green;
+      box-shadow: 1px 2px 1px 2px rgba(0, 0, 0, 0.2);
+    }
+
+    .line1 {
+      width: 100%;
+      height: 2px;
+      margin-top: 2rem;
+      background-color: #000000;
+    }
+
+    .addProduct {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      margin-top: 1.8rem;
+
+      min-width: 22.3em;
+
+      height: 11.438rem;
+
+      background-color: #c6efce;
+      border-radius: 0.313rem;
+
+      p {
+        font-size: 20px;
+        margin-top: 0.5rem;
+        margin-bottom: 0.3rem;
+      }
+
+      .productName {
+        margin-bottom: 0.563rem;
+        margin-top: 0.438rem;
+        width: 100%;
+        padding-left: 5.5%;
+        padding-right: 5.5%;
+
+        input {
+          width: 100%;
+          height: 2rem;
+        }
+      }
+
+      .priceAndQuantity {
+        width: 100%;
+        padding-left: 1.25rem;
+        padding-right: 1.25rem;
+        margin-bottom: 1.2rem;
+
+        input {
+          border-radius: 0.625rem;
+          border: none;
+          padding-left: 1rem;
+        }
+
+        .quantity {
+          width: 41%;
+          height: 2rem;
+        }
+
+        .price {
+          width: 10.875rem;
+          height: 2rem;
+          margin-left: 0.625rem;
+        }
+      }
+
+      .addProductButtons {
+        display: flex;
+        width: 88%;
+        height: 2rem;
+        align-items: center;
+        justify-content: space-around;
+
+        button {
+          width: 29%;
+          height: 2rem;
+          border-radius: 0.625rem;
+        }
+
+        .clear {
+          background-color: #ffeb9c;
+          color: #9c5700;
+          border: none;
+        }
+
+        .add {
+          background-color: #fff;
+          color: #18ad00;
+          border: solid 1px #18ad00;
+        }
+      }
+    }
+
+    .line2 {
+      width: 100%;
+      height: 2px;
+      margin-top: 1.5rem;
+      margin-bottom: 0.625rem;
+      background-color: #000000;
+    }
+
+    main {
+      display: flex;
+      flex-direction: column;
+
+      h2 {
+        color: #ffffff;
+        align-self: center;
+        margin-bottom: 0.625rem;
+      }
+
+      .productsList {
+        display: flex;
+        flex-direction: column;
+        color: #ffffff;
+        border-top: 1px solid #000000;
+        font-size: 1.25rem;
+        gap: 0.2rem;
+
+        padding: 0.8rem;
+
+        margin: 0.8rem;
+
+        background-color: rgba(198, 239, 206, 0.8);
+
+        border-radius: 1rem;
+
+        .nameAndButton {
+          display: flex;
+          justify-content: space-between;
+          padding-bottom: 0.5rem;
+          border-bottom: 1px solid #000000;
+
+          .gridItemName {
+            width: 13.5rem;
+          }
+
+          .removeProduct {
+            width: 6em;
+            border: none;
+            border-radius: 1.5rem;
+            background-color: #ffc7ce;
+            color: #c00000;
+          }
+        }
+
+        .qntPriceTotal {
+          display: flex;
+          justify-content: space-between;
+
+          .quantity {
+            color: #363636;
+          }
+
+          .money {
+            color: #18ad00;
+          }
+        }
+
+        .gridItemName p {
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          color: #000000;
+        }
+      }
+    }
+  }
+
+  .footer {
+    display: flex;
+    align-self: center;
+    width: 20em;
+    height: 2rem;
+    background-color: #ffc7ce;
+    border-radius: 0.625rem;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+    margin-bottom: 3.5rem;
+  }
+
+  .footer button {
+    color: #c00000;
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+  }
+
+  footer {
+    position: absolute;
+    bottom: 0;
+    padding: 0.5rem;
+    margin: 1rem;
+    border-radius: 1rem;
+    width: 10rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+  }
+
+  footer a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: #ffffff;
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 356px) {
+  .App {
+    min-height: 75rem;
+  }
+}
+
+@media only screen and (min-width: 550px) {
+  .App {
+    width: 34.375rem;
+    margin: auto;
+    border: solid 3px #000000;
+    border-radius: 1rem;
+    box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.6);
+  }
+}
