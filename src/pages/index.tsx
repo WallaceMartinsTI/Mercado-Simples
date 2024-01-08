@@ -207,48 +207,51 @@ export default function Home({ serverProducts }: HomeProps) {
           <h2>Produtos</h2>
           {showValue && (
             <div>
-              {products!.map((product: ProductProps) => (
-                <div key={product.id} className={styles.productsList}>
-                  <div className={styles.nameAndButton}>
-                    <div className={styles.gridItemName}>
-                      <p>{product.name}</p>
+              {products!
+                .slice()
+                .reverse()
+                .map((product: ProductProps) => (
+                  <div key={product.id} className={styles.productsList}>
+                    <div className={styles.nameAndButton}>
+                      <div className={styles.gridItemName}>
+                        <p>{product.name}</p>
+                      </div>
+
+                      <button
+                        onClick={() => removeProduct(product.id)}
+                        className={styles.removeProduct}
+                      >
+                        <p>Remover</p>
+                      </button>
                     </div>
 
-                    <button
-                      onClick={() => removeProduct(product.id)}
-                      className={styles.removeProduct}
-                    >
-                      <p>Remover</p>
-                    </button>
+                    <div className={styles.qntPriceTotal}>
+                      <div className={styles.quantity}>
+                        <p>{product.quantity}</p>
+                      </div>
+
+                      <div className={styles.money}>
+                        <p>
+                          {Number(product.price).toLocaleString("pt-br", {
+                            style: "currency",
+                            currency: "BRL",
+                          })}
+                        </p>
+                      </div>
+
+                      <div className={styles.money}>
+                        <p>
+                          {(
+                            Number(product.quantity) * Number(product.price)
+                          ).toLocaleString("pt-br", {
+                            style: "currency",
+                            currency: "BRL",
+                          })}
+                        </p>
+                      </div>
+                    </div>
                   </div>
-
-                  <div className={styles.qntPriceTotal}>
-                    <div className={styles.quantity}>
-                      <p>{product.quantity}</p>
-                    </div>
-
-                    <div className={styles.money}>
-                      <p>
-                        {Number(product.price).toLocaleString("pt-br", {
-                          style: "currency",
-                          currency: "BRL",
-                        })}
-                      </p>
-                    </div>
-
-                    <div className={styles.money}>
-                      <p>
-                        {(
-                          Number(product.quantity) * Number(product.price)
-                        ).toLocaleString("pt-br", {
-                          style: "currency",
-                          currency: "BRL",
-                        })}
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              ))}
+                ))}
             </div>
           )}
         </main>
@@ -272,10 +275,14 @@ export default function Home({ serverProducts }: HomeProps) {
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
   const cookies = parseCookies(context);
-  const cookiesProducts =
+  /*const cookiesProducts =
     Object.values(cookies).length === 0
       ? [{ id: 0, name: "", price: 0, quantity: 0, total: 0 }]
-      : JSON.parse(cookies.products);
+      : JSON.parse(cookies.products);*/
+  const cookiesProducts = cookies.products
+    ? JSON.parse(cookies.products)
+    : [{ id: 0, name: "", price: 0, quantity: 0, total: 0 }];
+
   return {
     props: {
       serverProducts: cookiesProducts,
